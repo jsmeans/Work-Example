@@ -5,7 +5,7 @@ add_action("wp_enqueue_scripts", "bt_enqueue_frontend", 11);
 function bt_enqueue_frontend() {
 
     wp_enqueue_script('bt_js', get_template_directory_uri().'/js/production.min.js', array('jquery'), '1.2', false);
-   wp_enqueue_script( 'google_js', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyDMXiIXW6fNzDDmuj64J_dFJXyz0TUYqyA', '', '' );
+   wp_enqueue_script( 'google_js', 'https://maps.googleapis.com/maps/api/, '', '' );
     wp_localize_script( 'bt_js', 'ajax_bt', array(
         'ajax_url' => admin_url( 'admin-ajax.php' )
     ));
