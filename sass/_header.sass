@@ -1,0 +1,112 @@
+
+header
+	position: relative
+	padding-top: 90px
+	.hero-video
+		position: relative
+		overflow: hidden
+		background: $g5
+		&:after
+			content: ''
+			padding-bottom: 56.25%
+			display: block
+			@media #{$phone}
+				padding-bottom: 35%
+		.money-badge
+			display: none
+			@media #{$tablet}
+				display: block
+				position: absolute
+				left: 5%
+				width: 20%
+				top: 20%
+		.money-words
+			display: none
+			@media #{$tablet}
+				display: block
+				position: absolute
+				right: 20px
+				width: 20%
+				top: 20%
+				@media #{$desktop}
+					position: absolute
+					right: 5%
+					width: 20%
+					top: 20%
+		.video-container
+			position: absolute
+			width: 100%
+			height: 100%
+
+			@media #{$phone}
+				top: 50%
+				left: 50%
+				width: 600px
+				height: 337.5px
+				
+				transform: translate(-50%,-50%)
+
+		iframe 
+			position: absolute
+			width: 100%
+			height: 100%
+			
+	.hero-image
+		position: relative 
+		overflow: hidden
+		margin: 0
+
+		&:after
+			content: ''
+			padding-bottom: 60%
+			display: block
+			@media #{$phone}
+				padding-bottom: 35%
+		img
+			position: absolute
+			width: 100%
+			height: 100%
+			object-fit: cover
+			top: 50%
+			transform: translateY(-50%)
+		.text-box
+			position: absolute
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			width: 45vw
+			height: 100%
+			left: 55%
+			margin: 0
+			@media #{$phone}
+				left: 50%
+				width: 50vw
+			h1
+				color: white
+				filter: drop-shadow(0px 14px 28px rgba(0,0,0,0.3))
+				font-size: 20px
+				line-height: 1
+				font-family: $fontb
+				letter-spacing: 2px
+				margin-bottom: 20px
+				@media #{$phone}
+					font-size: 44px
+
+			.header-text
+				max-width: 440px
+				.button
+					a
+						font-size: 16px
+						color: white
+						background-color: $primary
+						padding: 8px 16px
+						border-radius: 25px
+						letter-spacing: 0
+						@media #{$phone}
+							font-size: 20px
+							padding: 10px 20px
+
+
+
+

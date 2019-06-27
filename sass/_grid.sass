@@ -1,0 +1,165 @@
+/**
+ * CW Grid
+ * Lightweight, simple, customizable grid. Inspired by Foundation, but made to handle responsive functionality without the bloat.
+ * Version 0.0.1
+ * crane-west.com
+ * Licensed under MIT Open Source
+ */
+
+$bigWidth: 1030px
+$medWidth: 960px
+$smlWidth: 640px
+$padding: 15px
+$columns: 12
+
+* 
+	box-sizing: inherit
+
+
+.row 
+	max-width: $bigWidth
+	margin-left: auto
+	margin-right: auto
+
+	&.big 
+		max-width: 1230px
+	
+
+	&:before, &:after 
+		content: ''
+		display: table
+	
+
+	&:after 
+		clear: both
+	
+
+	.row 
+		max-width: none
+		margin-left: -$padding
+		margin-right: -$padding
+	
+// mobile
+@for $i from 1 through $columns 
+	$w: $i/$columns*100
+	
+	.s#{$i} 
+		float: left
+		width: $w+%
+		padding: 0 $padding
+	
+	
+	.m#{$i} 
+		padding: 0 $padding
+	
+
+	.l#{$i} 
+		padding: 0 $padding
+	
+
+	.s-push-#{$i} 
+		position: relative
+		left: $w+%
+	
+
+	.m-push-#{$i} 
+		position: relative
+		left: auto
+	
+
+	.l-push-#{$i} 
+		position: relative
+		left: auto
+	
+
+	.s-pull-#{$i} 
+		position: relative
+		left: -$w+%
+	
+
+	.m-pull-#{$i} 
+		position: relative
+		left: auto
+	
+
+	.l-pull-#{$i} 
+		position: relative
+		left: auto
+	
+
+
+.s-push-0,
+.m-push-0,
+.l-push-0,
+.s-pull-0,
+.m-pull-0,
+.l-pull-0 
+	left: 0
+
+
+.s-hide 
+	display: none
+
+
+.m-hide 
+	display: block
+
+
+.l-hide 
+	display: block
+
+// medium
+@media all and (min-width: $smlWidth) 
+	@for $i from 1 through $columns 
+		$w: $i/$columns*100
+
+		.m#{$i} 
+			float: left
+			width: $w+%
+		
+
+		.m-push-#{$i} 
+			left: $w+%
+		
+
+		.m-pull-#{$i} 
+			left: -$w+%
+
+	.s-hide 
+		display: block
+	
+
+	.m-hide 
+		display: none
+	
+
+
+// large
+@media all and (min-width: $medWidth) 
+	@for $i from 1 through $columns 
+		$w: $i/$columns*100
+
+		.l#{$i} 
+			float: left
+			width: $w+%
+		
+
+		.l-push-#{$i} 
+			left: $w+%
+		
+
+		.l-pull-#{$i} 
+			left: -$w+%
+		
+	
+
+	.s-hide 
+		display: block
+	
+
+	.m-hide 
+		display: block
+	
+
+	.l-hide 
+		display: none

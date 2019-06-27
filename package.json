@@ -1,0 +1,19 @@
+{
+  "name": "CW",
+  "version": "2.0.2",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-concat-sourcemap": "~0.4.1",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-copy": "latest",
+    "font-awesome": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-sass": "latest",
+    "node-bourbon": "latest",
+    "fg-loadcss": "latest"
+  }
+}

@@ -1,0 +1,547 @@
+
+//Logo Styles
+//====================================================
+.navbar
+  .logo-wrap
+    position: fixed
+   
+    height: 100px
+    width: 175px
+    left: 10vw
+    z-index: 42
+    .svg-banner
+      position: fixed
+      @media #{$desktop}
+        height: 180px
+    .banner
+      display: none
+      @media #{$desktop}
+        display: block
+        fill: $primary
+  .logo
+    position: fixed
+    left: 0vw
+    
+    z-index: 42
+    margin: 15px 10px 10px 10px 
+    overflow: hidden
+    width: 175px
+    
+    svg
+      width: 120px
+      height: 50px
+      margin: 0 auto
+      .st0, .st1
+        fill: $primary
+    @media #{$desktop}
+      left: 10vw
+      margin: 0px 10px 10px 10px 
+      svg
+        width: 155px
+        height: 100px
+        margin: 0 auto
+        .st0, .st1
+          fill: white
+//Login Button Styles
+//====================================================
+
+.login
+  position: absolute
+  top: 25px
+  right: 80px
+  display: flex
+  align-self: center
+  justify-content: center
+  z-index: 42
+  margin: 0px auto
+  
+  border: 2px solid $primary
+  border-radius: 30px
+  a
+    padding: 5px 10px 
+    color: $primary !important
+    font-family: $fontb
+    padding-left: 25px
+    font-size: 15px
+    &:before
+      position: absolute
+      top: 4px
+      left: 5px
+      background-image: url('../img/lock.png')
+      background-size: contain
+      background-repeat: no-repeat
+      display: inline-block
+      width: 15px
+      height: 33px
+      content: ''
+  @media #{$desktop}
+   
+  
+    a
+      
+      &:before
+.login-container
+  position: fixed
+  right: -350px
+  height: 100vh
+  width: 350px
+  background-color: white
+  z-index: 41
+  border-left: 3px solid $primary
+  transition: all .3s ease-in-out
+  @media #{$phonedown}
+    right: -100%
+    width: 100%
+  &.open
+    right: 0
+  .member-login
+    padding: 100px 20px 0px 20px
+    input
+      width: 100%
+      height: 50px
+      margin: 10px 0
+      border: 1px solid $primary
+    .g-button.left
+      width: calc(50% - 5px)
+
+    .g-button.right
+      width: calc(50% - 5px)
+      margin-right: 0
+  .login-links
+    padding: 15px 0 5px 20px
+    a
+      display: block
+      padding: 10px 0
+      &:hover
+        color: $primary
+  .article
+    position: absolute
+    
+    
+    margin: 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-color: white
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    border-radius: 7px
+
+    .img
+      
+      background-size: cover
+     
+      overflow: hidden
+      
+      border-radius: 7px
+      margin: 10px
+      
+      @media #{$phone}
+        
+        border-radius: 7px
+        margin: 10px
+      &:after
+        content: ''
+        
+        display: block
+      
+      .bg-img
+        height: 100%
+        width: 100%
+        padding-bottom: 100%
+        background-size: cover
+        background-position: center
+        transition: all .3s ease-in-out
+      .overlay
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background-color: rgba(0,0,0,.5)
+    .text-box
+      
+      
+      top: 48%
+      overflow: hidden
+      text-align: left
+      align-self: center
+      padding: 10px
+      @media #{$phone}
+        
+        
+      .card-text
+        text-align: left
+        font-size: 16px
+        line-height: 22px
+        
+        @media #{$phone}
+          font-size: 19px
+          line-height: 32px
+        
+      p
+        font-size: 14px
+        line-height: 19px
+        margin: 0
+          
+    &:hover
+        .bg-img
+          transform: scale(1.1)
+        .overlay
+          background-color: rgba(194,32,50,.8)
+
+
+
+//Mobile Nav Trigger Styles
+//====================================================
+.nav-trigger
+  position: fixed
+.sub-nav-trigger, .sub-nav-trigger-1
+  position: relative
+.nav-trigger, .sub-nav-trigger, .sub-nav-trigger-1
+  height: 50px
+  width: 50px
+  
+  right: 20px
+  display: flex
+  align-self: center
+  @media #{$desktop}
+    display: none
+  span, span:before, span:after
+    width: 27px
+    height: 2px
+    background-color: $primary
+    position: absolute
+    transition: all .1s
+  span
+    top: 24px
+    left: 15px
+    &:before
+      content: ''
+      display: block
+      top: -7px
+      left: 0
+    &:after
+      content: ''
+      display: block
+      top: 7px
+      left: 0
+  &.active
+    span
+      background-color: transparent
+    span:before
+      transform: rotate(45deg)
+      top: 0
+    span:after
+      transform: rotate(-45deg)
+      top: 0
+
+// Global Navigation
+//=========================================
+.navbar
+  position: fixed
+  display: flex
+  background-color: white
+  z-index: 41
+  width: 100vw
+  height: 90px
+  a
+    text-decoration: none
+    color: $fontColor
+  
+  .menu-container
+    height: 100vh
+    width: 100vw
+    background-color: white
+    left: -100vw
+    position: relative
+    transition: all .5s
+    @media #{$desktop}
+      position: absolute
+      width: auto
+      height: auto
+      display: flex
+      right: 220px
+      left: auto
+    .topnav
+      position: relative
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-evenly
+      padding: 100px 0 0 0
+      width: 100%
+      list-style: none
+      margin: 0
+      left: -100vw
+      transition: all .5s
+      @media #{$desktop}
+        position: relative
+        left: 0
+      &.active
+        left: 0
+      &.outLeft
+        left: -100vw
+      
+
+      @media #{$desktop}
+        height: 90px
+        flex-direction: row
+        padding: 0
+      .lvl0
+        display: flex
+        flex-direction: row
+        justify-content: center
+        left: 0
+        width: 250px
+        transition: all .5s
+        &.hide
+          left: -100vw
+        &.mobile-extra
+          
+        @media #{$desktop}
+          flex-direction: column
+          position: relative
+          width: auto
+          height: 90px
+          &.mobile-extra
+            display: none
+        .sub-nav-trigger
+          
+          top: 0px
+          right: -10px
+        &.formsdd
+          .dropdown-menu
+            .megamenu
+              column-count: 2
+        &.open 
+          background-color: #f4f4f4
+          border-radius: 0 15px 15px 0
+          position: absolute
+          left: 100vw
+          top: 88px
+          &.close
+            left: 0
+          .sub-nav-trigger
+            position: absolute
+            right: 4px
+        .top-link
+          z-index: 10
+          color: $fontColor
+          padding: 15px
+          font-size: 19px
+          text-align: center
+          line-height: 18px
+          font-weight: 800
+          margin: 0px
+          width: 120px
+          transition: all .5s
+          @media #{$desktop}
+            text-align: left
+            padding: 0 33px
+            width: auto
+            &:after
+              border-style: solid
+              border-width: 0 3px 3px 0
+              content: ''
+              display: inline-block
+              height: 5px
+              left: 0.30em
+              position: relative
+              top: 4px
+              transform: rotate(45deg)
+              vertical-align: top
+              width: 5px
+              transition: width .5s
+            @media #{$desktop}
+        &:hover
+          .top-link
+            color: $primary
+
+        .nav-bg
+          
+          @media #{$desktop}
+            height: 400px
+            position: fixed
+            left: calc(10% - 38px)
+            width: 251px
+            top: 131px
+            background-size: cover
+            background-color: white
+            background-blend-mode: luminosity
+            background-position: 38%
+            z-index: 41
+            border-radius: 7px
+        .banner-bottom
+          @media #{$desktop}
+            position: absolute
+            width: 175px
+            bottom: 0
+            top: 415px
+            left: 10vw
+            background-color: $primary
+            z-index: 41
+        .side-nav
+          display: none
+          position: absolute
+          bottom: 20px
+          right: 30px
+          #perma-nav
+            margin-bottom: 20px 
+            li
+              list-style: none
+              text-align: right
+              margin-top: 20px
+              a
+                font-weight: 800
+                font-size: 19px
+                &:hover
+                  color: $primary
+          .info
+            font-weight: 800
+            font-size: 19px
+            margin-bottom: 20px 
+          .social-links
+            text-align: right
+            a
+              display: inline-block
+              width: 30px
+              height: 30px
+              fill: $primary
+              margin: 5px
+          @media #{$desktop}
+            display: block
+        .dropdown-menu
+          position: absolute
+          // overflow: hidden
+          left: -200vw
+          width: 100vw
+          background-color: white
+          transition: all .5s
+          @media #{$desktop}
+            display: none
+            position: fixed
+            top: 90px
+            left: 0
+            padding-top: 40px
+            padding-left: calc(10vw + 251px)
+          &.active
+            left: 0
+            position: absolute
+          .megamenu
+            position: absolute
+            display: flex
+            flex-direction: column
+            justify-content: space-evenly
+            align-items: center
+            width: 100vw
+            top: 50px
+            transform: translate3d(0,0,0)
+            transition: all .5s
+            &.active
+              left: -100vw
+            @media #{$desktop}
+              position: static
+              display: block
+              width: 60vw
+              height: 420px
+              column-count: 3
+          .lvl1
+            position: relative
+            display: flex
+            flex-direction: row
+            justify-content: center
+            left: 0
+            width: 250px
+            transition: all .5s
+            @media #{$desktop}
+              position: relative
+              flex-direction: column
+              display: inline-flex
+              left: 0
+            &.open 
+              background-color: #f4f4f4
+              border-radius: 0 15px 15px 0
+              position: absolute
+              left: 200vw
+              top: 8px
+              transition: all .5s
+              &.close
+                left: 100vw
+              .sub-nav-trigger-1
+                position: absolute
+                right: 4px
+              
+            .lvl1-link
+              width: 200px
+              font-weight: 800
+              z-index: 10
+              color: #444
+              padding: 15px
+              font-size: 18px
+              text-align: center
+              line-height: 23px
+              transition: all .5s
+              @media #{$desktop}
+                text-align: left
+                padding: 30px 0 0 0
+                &:after
+                  content: ''
+                  display: block
+                  width: 200px
+                  height: 1px
+                  background-color: rgba(68,68,68,.2)
+                  margin-bottom: 10px
+                &:hover
+                  color: $primary
+
+            .in-dropdown
+              position: absolute
+              display: flex
+              top: 50px
+              width: 100vw
+              list-style: none
+              padding: 0
+              left: -200vw
+              justify-content: space-evenly
+              align-items: center
+              flex-direction: column
+              transition: all .5s
+              @media #{$desktop}
+                position: static
+                display: block
+                width: auto
+                height: auto
+                left: 0
+              &.active
+                left: 0px
+              .lvl2
+                
+                left: 100vw
+                padding: 10px 0
+                .lvl2-link
+                  font-family: $font
+                  
+                  &:after
+                    content: none
+                  &:hover
+                    
+                    color: $primary
+        &:hover
+          @media #{$desktop}
+            .dropdown-menu
+              display: inline-block
+
+    &.active
+      left: 0
+        
+
+     
+
+
+
+
+
+
+
+
+

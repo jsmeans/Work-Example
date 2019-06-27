@@ -1,0 +1,27 @@
+/*
+Font: 		Bison
+Style: 		ThinOutline
+URL: 		https://www.youworkforthem.com/font/T9001/bison
+Foundry: 	Ellen Luff
+Foundry: 	https://www.youworkforthem.com/designer/1024/ellen-luff
+Copyright:	EllenLuff.2018
+Version: 	17
+Created:	March 23, 2018
+License: 	https://www.youworkforthem.com/font-license 
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted 
+			from using the WebFonts(s) listed without a purchased license. 
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
+@font-face {
+	font-family: 'Bison-ThinOutline';
+	src: url('bison-thinoutline.eot');
+	src: url('bison-thinoutline.eot?#iefix') format('embedded-opentype'),
+             url('bison-thinoutline.woff2') format('woff2'),
+	     url('bison-thinoutline.woff') format('woff'),
+	     url('bison-thinoutline.ttf') format('truetype'),
+	     url('bison-thinoutline.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

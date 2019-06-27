@@ -1,0 +1,2103 @@
+#frontpage
+	margin-bottom: -50px
+	.fp
+		padding: 40px 0
+		position: relative
+		top: -50px
+	.fp.small-blocks
+		
+		padding: 0
+		.section-header
+			text-align: center
+		.articles
+			display: flex
+			flex-direction: column
+			flex-wrap: wrap
+			margin-top: 20px
+			@media #{$phone}
+				flex-direction: row
+			article
+				width: 100%
+				margin-bottom: 10px
+				display: flex
+				flex-direction: row
+
+				@media #{$phone}
+					flex-direction: column
+					width: calc(25% - 10px)
+					margin-right: 10px
+				.article
+					position: relative
+					width: 100%
+					
+					
+					display: inline-flex
+					flex-direction: row
+					align-items: center
+					background-color: white
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+				.img
+					
+					background-size: cover
+				 
+					overflow: hidden
+					width: 25%
+					border-radius: 7px
+					margin: 10px
+					
+					@media #{$phone}
+						width: 25%
+						border-radius: 7px
+						margin: 10px
+					&:after
+						content: ''
+						
+						display: block
+					
+					.bg-img
+						height: 100%
+						width: 100%
+						padding-bottom: 100%
+						background-size: cover
+						background-position: center
+						transition: all .3s ease-in-out
+					.overlay
+						position: absolute
+						top: 0
+						bottom: 0
+						left: 0
+						right: 0
+						background-color: rgba(0,0,0,.5)
+				.text-box
+					
+					width: 75%
+					top: 48%
+					overflow: hidden
+					text-align: left
+					align-self: center
+					padding: 10px
+					@media #{$phone}
+						width: 75%
+						padding: 0
+					.card-text
+						text-align: left
+						font-size: 16px
+						line-height: 22px
+						
+						@media #{$phone}
+							font-size: 19px
+							line-height: 32px
+						
+					p
+						font-size: 14px
+						line-height: 19px
+						margin: 0
+							
+				&:hover
+						.bg-img
+							transform: scale(1.1)
+						.overlay
+							background-color: rgba(194,32,50,.8)
+						
+	.fp.quick
+	
+		.section-header
+			text-align: center
+			h2
+				font-size: 40px
+				&:after
+					content: ''
+					display: block
+					height: 5px
+					background-color: $primary
+					width: 50px
+					margin: 20px auto
+			p
+				margin: 10px 0
+		.logo-container
+			display: flex
+			flex-direction: column
+			@media #{$phone}
+				flex-direction: row
+				justify-content: space-around
+			.link-box
+				@media #{$phonedown}
+					width: 100%!important
+			.logo-holder
+				text-align: center
+				width: 100%
+				height: 100%
+				&:first-child
+					padding-left: 0
+				&:last-child
+					padding-right: 0
+				img
+					width: auto
+					height: 100px
+					padding: 20px
+					object-fit: contain
+				h5
+					font-size: 18px
+	.fp.rate-cards
+		
+		h3
+			text-align: center
+		p
+			margin: 10px 0
+			
+		.card-block
+			display: inline-flex
+			height: 100%
+			border: 2px solid rgba(200,200,200,.5)
+			background-color: white
+		 
+			padding: 20px
+			border-radius: 25px
+			width: 100%
+			margin-bottom: 10px
+			@media #{$phone}
+				&.one
+					width: calc(100% - 18px)
+				&.two
+					width: calc((100% / 2) - 0px)
+				&.three
+					width: calc((100% / 3) - 24px)
+				&.four
+					width: calc((100% / 4) - 4px)
+
+			.card-rate
+				font-size: 50px
+				line-height: 45px
+				margin: 20px 0 0px
+				font-family: $fontb
+				color: $primary
+				span
+					font-size: 20px
+			.card-title
+				text-align: left
+			.card-cta
+				margin: 0
+				span
+					position: relative
+					display: inline-block
+					height: 1px
+					width: 20px
+					margin: 0 0 5px 10px
+					background-color: $fontColor
+					transition: all .3s ease-in-out
+					&:after
+						content: ''
+						position: absolute
+						right: -5px
+						bottom: -5px
+						display: block
+						border-top: 6px solid transparent
+						border-bottom: 6px solid transparent
+						border-left: 6px solid $fontColor
+		
+	.cta-box
+		text-align: center
+		margin: 20px 0
+		.button
+			display: inline-block
+			padding: 7px 14px 
+			margin: 0 auto
+			border: 2px solid #c22032
+			border-radius: 30px		
+			transition: all .2s ease-in-out
+			&:hover
+				background-color: $primary
+				color: white		
+	
+	.fp.card-blocks
+		background-color: $g5
+		.section-header
+			text-align: center
+		.articles
+			display: flex
+			flex-direction: column
+			margin-top: 20px
+			@media #{$phone}
+				flex-direction: row
+				justify-content: center
+			article
+				width: 100%
+				background-color: white
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+				display: flex
+				flex-direction: row
+				border-radius: 7px
+				margin-bottom: 10px
+				@media #{$phone}
+					margin: 5px
+					flex-direction: column
+					width: 25%
+				.article
+					position: relative
+					width: 100%
+					
+					@media #{$phone}
+						display: block
+					.link-box
+						margin: 10px
+				.img
+					position: relative
+					
+				 
+					overflow: hidden
+					
+					border-radius: 7px
+					width: 100%
+					@media #{$phone}
+						width: 100%
+						
+					&:after
+						content: ''
+						padding-bottom: 100%
+						display: block
+					
+					img
+						position: absolute
+						width: 100%
+						height: 100%
+						object-fit: cover
+						transition: all .3s ease-in-out
+					.overlay
+						position: absolute
+						top: 0
+						bottom: 0
+						left: 0
+						right: 0
+						background-color: rgba(0,0,0,.5)
+				.text-box
+					
+					width: 100%
+					top: 48%
+					overflow: hidden
+					text-align: center
+					align-self: center
+					padding: 10px
+					@media #{$phone}
+						
+						padding: 0
+					.card-text
+						text-align: center
+						font-size: 16px
+						line-height: 22px
+						margin-top: 10px
+						@media #{$phone}
+							font-size: 19px
+							line-height: 32px
+						.post-info
+							color: $fontColor
+							margin: 0 auto
+							text-align: center
+							display: inline-flex
+							font-size: 14px
+							p
+								font-size: 14px
+								margin: 0
+							.time
+								margin-right: 4px
+							
+							span
+								position: relative
+								display: inline-block
+								height: 1px
+								width: 20px
+								margin: 0 0 5px 10px
+								background-color: whitesmoke
+								transition: all .3s ease-in-out
+								&:after
+									content: ''
+									position: absolute
+									right: -5px
+									bottom: -5px
+									display: block
+									border-top: 6px solid transparent
+									border-bottom: 6px solid transparent
+									border-left: 6px solid whitesmoke
+				&:hover
+					img
+						transform: scale(1.1)
+					.text-box
+						.card-text
+							.card-cta
+								span
+									width: 40px	
+	.fp.principles
+		overflow: hidden
+		padding: 0
+		.lp-header-image
+		 
+			position: relative
+			background-color: white
+			
+			background-position: top
+			background-size: cover
+			background-repeat: no-repeat
+			overflow: hidden
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			@media #{$phone}
+				justify-content: center
+			
+			.overlay
+				
+				overflow: hidden
+				width: 100vw
+				height: 100%
+				// transition: all .2s ease-in-out
+				.left
+					position: absolute
+					z-index: 2
+					left: 0
+					top: 0
+					height: 100%
+					width: 100%
+					background-image: url(../img/fp-angle.png)
+					background-size: cover
+					background-repeat: no-repeat
+					background-position: 80%
+					@media #{$phone} 
+						background-position: 35%
+				.img-object
+					position: absolute
+					right: 0px
+					bottom: 0
+					width: 75vw
+					height: 100%
+					max-height: 946px
+					max-width: 1400px
+					
+					background-size: cover
+					background-repeat: no-repeat
+					background-position: 55%
+					@media #{$phone} 
+						width: 60vw
+						height: 100%
+			
+			.text-wrap
+				position: relative
+				z-index: 3
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 80vw
+				height: 50vh
+				padding: 0 0 0 50px
+				left: 20vw
+				@media #{$phone}
+					width: 50vw
+					left: 50vw
+					padding: 30px 20px 50px 20px
+				.text-box
+					width: 100%
+					color: $fontColor
+					display: flex
+					flex-direction: column
+					align-content: center
+					justify-content: flex-start
+					@media #{$phone}
+						width: 75%
+						justify-content: center
+					h2
+						margin: 5px 0
+						color: white
+						@media #{$phone} 
+							margin: 10px 0
+							font-size: 40px
+							line-height: 45px
+						
+					p
+						line-height: 29px
+						margin: 0
+						color: white
+						@media #{$phone}
+							margin: 10px 0
+							line-height: 27px
+							font-size: 22px
+					.button
+						background-color: transparent
+						display: block
+						padding: 10px 20px
+						color: white
+						width: max-content
+						margin-top: 10px
+						text-transform: uppercase
+						border: 2px solid white
+						border-radius: 50px
+						font-size: 16px
+						@media #{$phone}
+							margin-top: 20px
+							padding: 15px 25px
+							font-size: 19px
+	
+	.fp.logos
+		background-color: $g5
+		.section-header
+			text-align: center
+			h2
+				font-size: 40px
+				&:after
+					content: ''
+					display: block
+					height: 5px
+					background-color: $primary
+					width: 50px
+					margin: 20px auto
+			p
+				margin: 10px 0
+		.logo-container
+			display: flex
+			flex-direction: column
+			@media #{$phone}
+				flex-direction: row
+				justify-content: space-around
+			.logo-holder
+				text-align: center
+				width: 100%
+				height: 100%
+				&:first-child
+					padding-left: 0
+				&:last-child
+					padding-right: 0
+				img
+					width: auto
+					height: 100px
+					padding: 20px
+					object-fit: contain
+
+.slide-bg
+	position: relative
+	@media #{$phone}
+		display: none
+		position: absolute
+		top: 0
+		right: 0
+		z-index: 2					
+		width: 100vw
+		opacity: 1
+		background-color: white
+		overflow: hidden
+		height: 100vh
+	&.start
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: white
+		height: 100vh
+		h1
+			font-size: 70px
+			text-align: center
+			.fp-container
+				color: $primary
+				display: block
+			.fp-container2
+				color: $fontColor
+				display: block
+		.icon-scroll
+			box-shadow: inset 0 0 0 3px $fontColor
+			&:before
+				background: $fontColor
+		@media #{$phone}
+			
+			h1
+				font-size: 100px
+				@media #{$tablet}
+					font-size: 150px
+				@media #{$desktop}
+					font-size: 200px
+				.fp-container
+					color: $primary
+					display: auto
+				.fp-container2
+					color: $fontColor
+					display: auto
+
+		.slide-img
+			position: relative
+			@media #{$phone}
+				width: 40vw
+				height: 100vh
+				position: absolute
+				display: none
+				align-items: center
+				top: 0
+				z-index: 40
+			
+			
+
+			.section-img
+				position: relative
+				height: 200px
+				width: 100%
+				object-fit: cover
+				@media #{$phone}
+					position: absolute
+					height: 75vh
+					
+				
+			.section-img-2
+				position: absolute
+				top: 10vh
+				left: 50%
+				transform: translateX(-50%)
+				filter: drop-shadow(0px 14px 28px rgba(0,0,0,0.3))
+				object-fit: cover
+				width: 85vw
+				height: 200px
+				img
+					object-fit: cover
+					height: 100%
+					width: 100%
+				@media #{$phone}
+					position: relative
+					right: -10vw
+					left: auto
+					transform: auto
+					top: auto
+					object-fit: contain
+					height: auto
+			a.davideo
+				.overlay
+					position: absolute
+					left: 0
+					top: 0
+					height: 100%
+					width: 100%
+					background-color: rgba(255,255,255,.25)
+					background-size: cover
+					background-repeat: no-repeat
+					background-position: 55%
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					height: 100px
+					width: 100px
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					background-image: url(../img/play.png)
+					background-repeat: no-repeat
+					background-size: contain
+					transition: all .2s ease-in-out
+			
+				
+
+				
+		.slide-text
+			width: 85vw
+			margin: 20px auto
+			margin-top: calc(20px + 10vh)
+			margin-bottom: 30px
+			@media #{$phone}
+				display: flex
+				flex-direction: column
+				align-content: center
+				position: absolute
+				top: 0
+				right: 0
+				z-index: 20					
+				width: 50%
+				opacity: 1
+				background-size: cover
+				overflow: hidden
+				height: 100vh
+				transition: top 0.9s ease-in-out
+				margin: 0
+				&.active
+					top: 0
+				&.down
+					top: 200%
+				&.up
+					top: -100%
+			.section-wrapper
+				@media #{$phone}
+					display: flex
+					flex-direction: row
+					justify-content: flex-end
+					padding: 20vh 0
+					margin: 0 auto
+					width: 75%
+					min-height: 100%
+
+				.content-block
+					@media #{$phone}
+						align-self: stretch
+						display: flex
+						flex-direction: column
+						
+						justify-content: center
+						position: relative
+						
+						height: 60vh
+					&.left
+						
+					&.center
+						
+					&.right
+
+					.eyebrow
+						margin: 0
+						color: $primary
+										
+					h2
+						font-size: 48px
+						line-height: 43px
+						color: $fontColor
+						@media #{$phone}
+							font-size: 70px
+							line-height: 60px
+							
+					p
+						font-size: 1.2em
+						color: $fontColor
+					.button
+						pointer-events: initial
+						background-color: $primary
+						color: white
+						width: fit-content
+						padding: 10px 20px
+						transition: all 0.2s ease-in-out
+						&:hover
+						
+						transition: all 0.2s ease-in-out
+	.slide-wrap:nth-child(odd)
+		@media #{$phone}
+			.slide-img
+				right: 0
+				.section-img-2
+					right: auto
+					left: -10vw
+			.section-wrapper
+				flex-direction: row-reverse
+			.slide-text
+				left: 0
+				right: auto
+
+
+// Form Pages
+//=================================================
+.form-template
+		padding-top: 50px
+
+// Loan Pages
+//=================================================
+
+.page.loans
+	
+	h1
+		display: block
+		width: 100%
+	#main
+		display: flex
+		flex-direction: column
+		margin: 20px
+		@media #{$phone}
+			flex-direction: row
+		#content
+			width: 100%
+			@media #{$phone}
+				width: 60%
+		#sidebar
+			@media #{$phone}
+				width: 40%
+				float: right
+				margin: 0 0 0 50px
+				padding: 0 40px
+			.super
+				margin-bottom: 20px
+				font-size: 22px
+				font-weight: 800
+				@media #{$phone}
+					font-size: 22px
+			.featured-rate
+				color: $primary
+				font-size: 45px
+				margin-bottom: 20px
+				span
+					font-size: 22px
+			.form
+				margin-top: 20px
+				
+				.loan-inputs
+					width: calc( 40% - 4px)
+					display: inline-block
+					margin-right: 15px
+					margin-top: 15px
+				label, .results p
+					display: block
+					font-size: 16px
+					font-family: $fontb
+					margin: 0
+				input
+					font-size: 22px
+					padding-left: 15px
+					width: 100%
+					height: 50px
+					background-color: $g5
+					border: none
+					border-radius: 5px
+					margin-right: 10px
+				.results
+					margin-top: 20px
+					.amount
+						font-size: 24px
+
+
+
+
+
+// Page Format
+//====================================================
+#page-header
+	.single-header-image
+		position: relative 
+		overflow: hidden
+		margin: 0
+		&:after
+			content: ''
+			padding-bottom: 42%
+			display: block
+		img
+			position: absolute
+			top: 50%
+			min-width: 100%
+			transform: translateY(-50%)
+		h1
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translateX(-50%)
+			color: white
+			filter: drop-shadow(0px 14px 28px rgba(0,0,0,0.3))
+			font-size: 64px
+
+
+//Blog Archive
+//===================================================
+
+#blog-header  
+	.single-header-image
+		position: relative 
+		overflow: hidden
+		margin: 0
+		&:after
+			content: ''
+			padding-bottom: 65%
+			display: block
+			@media #{$phone}
+				padding-bottom: 42%
+		img
+			position: absolute
+			top: 50%
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transform: translateY(-50%)
+		h1
+			position: absolute
+			top: 50%
+			text-align: center
+			width: 100%
+			color: white
+			filter: drop-shadow(0px 14px 28px rgba(0,0,0,0.3))
+			font-size: 34px
+			@media #{$phone}
+				font-size: 64px
+
+#news-page
+	.flex-box
+		padding: 0
+	.featured
+		padding: 30px 0 15px 0
+		.top-article
+			display: flex
+			flex-direction: row
+			.text-box
+				padding: 0 20px
+				width: calc(100% / 3)
+				.featured-title
+					color: $primary
+					font-size: 40px
+					font-weight: 700
+				.post-info p
+					margin: 5px 0 10px 0
+					color: $primary
+					font-size: 23px
+			.link-box
+				width: calc(((100% / 3) * 2) - 15px)
+				height: 350px
+				background-position: center
+				background-size: cover
+	.articles
+		width: auto
+		@media #{$phone}
+			
+		
+		.article
+			
+			display: inline-flex
+			width: calc(((100% / 3) * 2) - 16px)
+			height: 350px
+			margin: 0 10px 15px 0
+			background-position: center
+			background-size: cover
+			&:nth-child(1)
+				width: calc(100% / 3)
+			&:nth-child(4)
+				width: calc(100% / 3)
+			&:nth-child(5)
+				width: calc(100% / 3)
+			&:nth-child(8)
+				width: calc(100% / 3)
+			&:nth-child(even)
+				margin-right: 0
+			@media #{$phone}
+			.link-box
+				position: relative
+				width: 100%
+			.text-box
+				position: absolute
+				width: 100%
+				// background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.7));
+				bottom: 0
+				padding: 20px
+				@media #{$phone}
+					padding: 20px 0 10px 0
+					
+				.card-text
+					text-align: center
+					font-size: 20px
+					line-height: 22px
+					color: white
+					@media #{$phone}
+						font-size: 30px
+						line-height: 32px
+						text-transform: uppercase
+						text-shadow: 0px 0px 10px black
+						text-align: right
+						padding-right: 20px
+					.post-info
+						color: $fontColor
+						margin: 0 auto
+						text-align: center
+						display: inline-flex
+						font-size: 14px
+						p
+							font-size: 14px
+							margin: 0
+						.time
+							margin-right: 4px
+						
+						span
+							position: relative
+							display: inline-block
+							height: 1px
+							width: 20px
+							margin: 0 0 5px 10px
+							background-color: whitesmoke
+							transition: all .3s ease-in-out
+							&:after
+								content: ''
+								position: absolute
+								right: -5px
+								bottom: -5px
+								display: block
+								border-top: 6px solid transparent
+								border-bottom: 6px solid transparent
+								border-left: 6px solid whitesmoke
+			&:hover
+					img
+						transform: scale(1.1)
+					.overlay
+						background-color: rgba(194,32,50,.8)
+					.text-box
+						.card-text
+
+// Repossessed Vehicles Archive
+//==================================================
+
+#repo-page
+	.no-repo
+		height: 350px
+		display: flex
+		justify-content: center
+		align-items: center
+	.articles
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		flex-wrap: wrap
+		margin-top: 20px
+		@media #{$phone}
+			flex-direction: row
+		article
+			width: 100%
+			background-color: white
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+			display: flex
+			flex-direction: row
+			border-radius: 7px
+			@media #{$phone}
+				margin: 5px
+				flex-direction: column
+				width: calc((100% / 3) - 10px)
+			.article
+				position: relative
+				width: 100%
+				
+				@media #{$phone}
+					display: block
+				.link-box
+					margin: 10px
+			.img
+				position: relative
+				
+			 
+				overflow: hidden
+				
+				border-radius: 7px
+				width: 100%
+				@media #{$phone}
+					width: 100%
+					
+				&:after
+					content: ''
+					padding-bottom: 50%
+					display: block
+				
+				img
+					position: absolute
+					width: 100%
+					height: 100%
+					object-fit: cover
+					transition: all .3s ease-in-out
+				.overlay
+					position: absolute
+					top: 0
+					bottom: 0
+					left: 0
+					right: 0
+					background-color: rgba(0,0,0,.5)
+			.text-box
+				
+				width: 100%
+				top: 48%
+				overflow: hidden
+				text-align: center
+				align-self: center
+				padding: 10px
+				@media #{$phone}
+					
+					padding: 0
+				.card-text
+					text-align: center
+					font-size: 16px
+					line-height: 22px
+					
+					@media #{$phone}
+						font-size: 19px
+						line-height: 32px
+					.post-info
+						color: $fontColor
+						margin: 0 auto
+						text-align: center
+						display: inline-flex
+						font-size: 14px
+						p
+							font-size: 14px
+							margin: 0
+						.time
+							margin-right: 4px
+						
+						span
+							position: relative
+							display: inline-block
+							height: 1px
+							width: 20px
+							margin: 0 0 5px 10px
+							background-color: whitesmoke
+							transition: all .3s ease-in-out
+							&:after
+								content: ''
+								position: absolute
+								right: -5px
+								bottom: -5px
+								display: block
+								border-top: 6px solid transparent
+								border-bottom: 6px solid transparent
+								border-left: 6px solid whitesmoke
+			&:hover
+					img
+						transform: scale(1.1)
+					.overlay
+						background-color: rgba(194,32,50,.8)
+					.text-box
+						.card-text
+//Archive.php
+//===================================================
+#archive
+	padding-top: 100px
+	display: flex
+	flex-direction: column
+	@media #{$phone} 
+		flex-direction: row
+
+	.content
+		
+		width: 100%
+		@media #{$phone} 
+			width: 70%
+			padding: 20px
+	.articles
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		flex-wrap: wrap
+		margin-top: 20px
+		@media #{$phone}
+			flex-direction: row
+		article
+			width: 100%
+			background-color: white
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+			display: flex
+			flex-direction: row
+			border-radius: 7px
+			@media #{$phone}
+				margin: 5px
+				flex-direction: column
+				width: calc((100% / 3) - 10px)
+			.article
+				position: relative
+				width: 100%
+				
+				@media #{$phone}
+					display: block
+				.link-box
+					margin: 10px
+			.img
+				position: relative
+				
+			 
+				overflow: hidden
+				
+				border-radius: 7px
+				width: 100%
+				@media #{$phone}
+					width: 100%
+					
+				&:after
+					content: ''
+					padding-bottom: 50%
+					display: block
+				
+				img
+					position: absolute
+					width: 100%
+					height: 100%
+					object-fit: cover
+					transition: all .3s ease-in-out
+				.overlay
+					position: absolute
+					top: 0
+					bottom: 0
+					left: 0
+					right: 0
+					background-color: rgba(0,0,0,.5)
+			.text-box
+				
+				width: 100%
+				top: 48%
+				overflow: hidden
+				text-align: center
+				align-self: center
+				padding: 10px
+				@media #{$phone}
+					
+					padding: 0
+				.card-text
+					text-align: center
+					font-size: 16px
+					line-height: 22px
+					
+					@media #{$phone}
+						font-size: 19px
+						line-height: 32px
+					.post-info
+						color: $fontColor
+						margin: 0 auto
+						text-align: center
+						display: inline-flex
+						font-size: 14px
+						p
+							font-size: 14px
+							margin: 0
+						.time
+							margin-right: 4px
+						
+						span
+							position: relative
+							display: inline-block
+							height: 1px
+							width: 20px
+							margin: 0 0 5px 10px
+							background-color: whitesmoke
+							transition: all .3s ease-in-out
+							&:after
+								content: ''
+								position: absolute
+								right: -5px
+								bottom: -5px
+								display: block
+								border-top: 6px solid transparent
+								border-bottom: 6px solid transparent
+								border-left: 6px solid whitesmoke
+			&:hover
+					img
+						transform: scale(1.1)
+					.overlay
+						background-color: rgba(194,32,50,.8)
+					.text-box
+						.card-text
+	.archive-sidebar
+		padding: 20px
+		margin-top: 20px
+		width: 100%
+		@media #{$phone} 
+			width: 30%
+		.img-holder
+			overflow: hidden
+			position: relative
+			margin-bottom: 10px
+			&:after
+				content: ''
+				display: block
+				padding-top: 50%
+			img
+				position: absolute
+				width: 100%
+				height: 100%
+				object-fit: cover
+				transition: all .3s ease-in-out
+			.info
+				position: absolute
+				display: block
+				width: 100%
+				bottom: 0
+				padding: 10px 0 0 5px
+				color: white
+				background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0))
+				h3
+					color: white
+					font-size: 18px
+		.cat-list
+			background-color: white
+			margin-top: 20px
+			h4
+				margin: 0 0 10px 0
+			h5
+				display: inline-block
+				font-size: 20px
+		h2
+			margin-bottom: 10px
+			font-size: 26px
+			line-height: 26px
+// Single Post
+//====================================================
+#blog-single 
+	
+	
+	.post-container
+		padding-top: 0
+		display: flex
+		flex-direction: column
+		@media #{$phone} 
+			flex-direction: row
+
+		.content
+			
+			width: 100%
+			@media #{$phone} 
+				width: 70%
+				padding: 20px
+			.title
+				color: $primary
+				font-size: 40px
+				font-weight: 700
+			.post-info p
+				margin: 5px 0 10px 0
+				color: $primary
+				font-size: 23px
+	.sidebar
+		padding: 20px
+		margin-top: 20px
+		width: 100%
+		@media #{$phone} 
+			width: 30%
+		.img-holder
+			overflow: hidden
+			position: relative
+			margin-bottom: 10px
+			&:after
+				content: ''
+				display: block
+				padding-top: 50%
+			img
+				position: absolute
+				width: 100%
+				height: 100%
+				object-fit: cover
+				transition: all .3s ease-in-out
+			.info
+				position: absolute
+				display: block
+				width: 100%
+				bottom: 0
+				padding: 10px 0 0 5px
+				color: white
+				background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0))
+				h3
+					color: white
+					font-size: 18px
+		.cat-list
+			background-color: white
+			margin-top: 20px
+			h4
+				margin: 0 0 10px 0
+			h5
+				display: inline-block
+				font-size: 20px
+		h2
+			margin-bottom: 10px
+			font-size: 26px
+			line-height: 26px
+
+//Contact Page Template
+//==================================================
+.quick-contact
+	width: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	.numbers
+		display: flex
+		width: 70%
+		align-items: center
+		margin: 20px auto
+		.contact-info
+			display: inline-block
+			width: 40%
+			text-align: right
+		h4
+			display: inline-block
+			width: 60%
+
+
+
+//Locations Page Template
+//==================================================
+
+#locations
+	.module.small-blocks
+		margin-top: -130px
+		.locations
+			margin: 5px
+			width: 100%
+			@media #{$phone}
+				width: 25%
+			.map-link
+				width: 100%
+				.link-box
+					display: flex
+					flex-direction: row
+					width: 100%
+					@media #{$phone}
+						flex-direction: column
+					.img
+						width: 30%
+						@media #{$phone}
+							width: 100%
+					.text-box
+						width: 70%
+						@media #{$phone}
+							width: 100%
+		.articles
+			position: relative
+			article
+				padding: 10px
+				height: 50%
+				width: 100%
+				.img
+					// width: 45%
+					&:after
+						padding-bottom: 50%
+				// @media #{$phone}
+				//   flex-direction: row
+
+			.info
+				margin: 5px
+				padding: 10px
+				width: 100%
+				display: none
+				@media #{$phone}
+					display: block
+				span
+					font-weight: 700
+
+
+//Career PAge
+//===================================================
+
+#careers-page
+	.post-link
+		display: inline-flex
+		flex-direction: column
+		width: 100%
+		margin-right: 10px
+		margin-bottom: 30px
+		@media #{$phone}
+			width: calc((100%/2) - 10px)
+		&:nth-child(3n)
+			margin-right: 0px
+		.img-box
+			position: relative
+			width: 100%
+			overflow: hidden
+			&:after
+				content: ''
+				display: block
+				padding-bottom: 52%
+			img
+				position: absolute
+				top: 50%
+				min-width: 100%
+				transform: translateY(-50%)
+		.title
+			
+			a
+				color: $fontColor
+				font-family: $fontb
+				font-size: 40px
+				line-height: 30px
+				text-align: center
+				width: 100%
+		.author
+			a
+				color: $fontColor
+
+// Contact Page
+//==========================================
+
+
+#contact-page
+
+	height: auto
+	@media #{$phone}
+		height: 100vh
+	.contact-header-image
+		position: relative
+		
+		overflow: hidden
+		display: flex
+		flex-direction: column-reverse
+		justify-content: flex-start
+		@media #{$phone}
+			justify-content: center
+			flex-direction: column
+			height: 100vh
+		img
+			position: absolute
+			top: 50%
+			width: 100%
+			transform: translateY(-50%)
+			height: 100%
+			object-fit: cover
+		.overlay
+			position: absolute
+			overflow: hidden
+			width: 100vw
+			height: 100%
+			display: block
+			.angle
+				position: absolute
+				left: 0
+				top: 0
+				height: 100%
+				width: 100%
+				background-image: url(../img/fp-angle.png)
+				background-size: cover
+				background-repeat: no-repeat
+				background-position: 55%
+				@media #{$phone} 
+
+		.text-wrap
+			position: relative
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100%
+			
+			@media #{$phone}
+				width: 50vw
+			.text-box
+				width: 100%
+				color: $fontColor
+				display: flex
+				flex-direction: column
+				align-content: center
+				text-align: center
+				@media #{$phone}
+					width: 75%
+					
+				h1
+					margin-bottom: 20px
+					font-size: 26px
+					text-transform: uppercase
+					line-height: 31px
+					@media #{$phone}
+						font-size: 40px
+						margin-bottom: 20px
+						line-height: 45px
+				h2
+					line-height: 27px
+					font-size: 22px
+					@media #{$phone}
+						line-height: 30px
+						font-size: 25px
+				h3
+					text-align: center
+				h4
+					margin-top: 20px
+					font-size: 20px
+					line-height: 25px
+					@media #{$phone}
+						line-height: 30px
+						font-size: 25px
+				.button
+					background-color: rgba(187, 40, 33, .9)
+					display: inline-block
+					padding: 10px 15px
+					color: white
+					min-width: 200px
+					margin: 20px 10px 
+					text-transform: uppercase
+					text-align: center
+					font-size: 19px
+					@media #{$phone}
+						margin-top: 30px
+						padding: 15px 25px
+						font-size: 21px
+
+	.contact-form
+		position: relative
+		right: 0px
+		
+		width: calc(100vw - 40px)
+		margin: 85px 20px 20px
+		background-color: rgba(42, 42, 42, .6)
+		@media #{$phone} 
+			position: absolute
+			width: 50vw
+			
+			margin: 0
+		.gform_confirmation_message
+			color: white
+			height: 50vh
+			font-size: 30px
+			padding: 20px
+		.gform_body
+			padding: 0 20px
+			color: white
+			.name, .phone
+				display: inline-block
+				width: 100%
+				@media #{$phone} 
+					width: 50%
+				input
+					width: 100%
+			.ginput_container
+				margin-top: 0
+				input, select, textarea
+					color: $fontColor
+				select
+					height: 39px
+					margin-bottom: 0
+					background-color: white
+		.gform_footer
+			text-align: center
+			margin-top: 0
+			.gform_button
+				padding: 10px 20px  
+				background-color: transparent
+				color: white
+				font-size: 16px
+				width: 90%
+				@media #{$phone} 
+					width: auto
+// Thank You Page
+// page-thank-you.php
+//=================================================
+.contact-form.thanks
+	min-height: 60vh
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	h1,h2,h3,h4,h5,p
+		width: 70%
+		text-align: center
+		color: $fontColor
+	h1
+		margin-bottom: 20px
+		font-size: 60px
+
+
+//Financial Education Page
+//==================================================
+
+#education-page
+	.title-area
+		text-align: center
+		img
+			width: 50%
+	.articles
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		flex-wrap: wrap
+		justify-content: center
+		margin-top: 20px
+		@media #{$phone}
+			flex-direction: row
+		article
+			width: 100%
+			background-color: white
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+			display: flex
+			flex-direction: row
+			border-radius: 7px
+			overflow: hidden
+			margin-bottom: 10px
+			@media #{$phone}
+				margin: 5px
+				flex-direction: column
+				width: calc((100% / 3) - 10px)
+			.article
+				position: relative
+				width: 100%
+				
+				@media #{$phone}
+					display: block
+				.link-box
+					margin: 10px
+			.img
+				position: relative
+				
+			 
+				overflow: hidden
+				
+			
+				width: 100%
+				@media #{$phone}
+					width: 100%
+					
+				&:after
+					content: ''
+					padding-bottom: 50%
+					display: block
+				
+				img
+					position: absolute
+					width: 100%
+					height: 100%
+					object-fit: cover
+					transition: all .3s ease-in-out
+				.overlay
+					position: absolute
+					top: 0
+					bottom: 0
+					left: 0
+					right: 0
+					background-color: rgba(0,0,0,.5)
+			.text-box
+				
+				width: 100%
+				top: 48%
+				overflow: hidden
+				text-align: center
+				align-self: center
+				padding: 10px
+				@media #{$phone}
+					
+					
+				.card-text
+					text-align: center
+					font-size: 16px
+					line-height: 22px
+					
+					@media #{$phone}
+						font-size: 19px
+						line-height: 32px
+					.post-info
+						color: $fontColor
+						margin: 0 auto
+						text-align: center
+						display: inline-flex
+						font-size: 14px
+						p
+							font-size: 14px
+							margin: 0
+						.time
+							margin-right: 4px
+						
+						span
+							position: relative
+							display: inline-block
+							height: 1px
+							width: 20px
+							margin: 0 0 5px 10px
+							background-color: whitesmoke
+							transition: all .3s ease-in-out
+							&:after
+								content: ''
+								position: absolute
+								right: -5px
+								bottom: -5px
+								display: block
+								border-top: 6px solid transparent
+								border-bottom: 6px solid transparent
+								border-left: 6px solid whitesmoke
+			&:hover
+					img
+						transform: scale(1.1)
+					.overlay
+						background-color: rgba(194,32,50,.8)
+					.text-box
+						.card-text
+	.finance-slider
+		padding: 0
+		position: relative
+		top: 0
+		left: 0
+		overflow: hidden
+		width: 100%
+		height: 450px
+		margin: 10px auto
+		@media #{$phone}
+			width: 900px
+			height: 300px
+			margin: 60px auto
+		.prevButton
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 0
+			width: 20px
+			height: 40px
+			background: url(../img/slider-buttons.png) no-repeat 0 0
+			z-index: 2
+		.nextButton
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			right: 0
+			width: 20px
+			height: 40px
+			background: url(../img/slider-buttons.png) no-repeat 100% 0
+			z-index: 2
+		.slider
+			width: 100%
+			height: 100%
+			.item
+				position: relative
+				top: 0
+				left: 0
+				width: 820px
+				
+				margin: 0 40px 0 40px
+			
+				overflow: hidden
+				@media #{$phone}
+					height: 300px
+				.image
+					
+					top: 0
+					left: 0
+					width: 100%
+					padding-bottom: 50%
+					background-position: 50% 50%
+					background-size: cover
+					border-radius: 7px
+					@media #{$phone}
+						width: 600px
+						height: 300px
+						position: absolute
+						padding-bottom: 0
+					.bg
+						border: 10px solid #000
+						border-right: 0
+						height: 180px
+						width: 340px
+						opacity: 0.5
+						display: none
+				.text
+					
+					top: 0
+					right: 0
+					width: 100%
+					height: 300px
+					padding: 20px
+					@media #{$phone}
+						position: absolute
+						width: 220px
+						height: 300px
+					.bg
+						position: absolute
+						top: 0
+						right: 0
+						width: 220px
+						height: 300px
+						
+						opacity: 0.9
+				.title
+					position: relative
+					top: 0
+					left: 0
+					text-indent: -1px
+					span
+						color: $fontColor
+						
+				.desc
+					position: relative
+					top: 0
+					left: 0
+					margin: 0 0 0 0
+					span
+						p
+							
+							color: $fontColor
+				.button
+					position: absolute
+					left: 20px
+					bottom: 20px
+					padding: 5px 14px
+					margin: 10px 0 0 0
+					color: $primary
+					border-radius: 20px
+					border: 1px solid $primary
+					cursor: pointer
+	#tips_events
+		display: flex
+		flex-direction: column
+		@media #{$phone}
+			flex-direction: row
+		.money_tips
+			position: relative
+			width: 100%
+			padding-bottom: 100%
+			
+			justify-content: center
+			background-color: $moneyschool
+			@media #{$phone}
+				padding-bottom: 0
+				width: 580px
+				height: 580px
+			.corner-bg
+				position: absolute
+				bottom: 0
+			.money101
+				position: absolute
+				padding: 40px
+				h3, p
+					color: white
+				h3
+					font-size: 30px
+					font-family: "AvBlack"
+					display: inline-block
+					@media #{$phone}
+						font-size: 40px
+					&:after
+						content: ''
+						display: block
+						height: 7px
+						background-color: $green
+						margin-top: 8px
+				p
+					font-size: 12px
+					font-weight: 700
+					line-height: 19px
+					@media #{$phone}
+						font-size: 28px
+						line-height: 33px
+		.money_events
+			@media #{$phone}
+				width: 50%
+			.event-section-title
+				h3
+					padding-left: 0px
+					margin: 20px 0 0 0
+					@media #{$phone}
+						padding-left: 60px
+			.events
+				
+				padding-top: 20px
+				padding-left: 0px
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+				@media #{$phone}
+					height: 509px
+					padding-left: 60px
+				.single-event
+					margin-bottom: 20px
+	#calculators
+		padding: 20px 0
+		
+		background-color: $g5
+		.calculator h3
+			text-align: center
+		.form
+			margin-top: 20px
+			display: flex
+			flex-direction: column
+			align-items: center
+			@media #{$phone}
+				flex-direction: row
+			.input-holder
+				width: 100%
+				display: inline-block
+				@media #{$phone}
+					width: 50%
+			.result-holder
+				width: 100%
+				height: 100%
+				display: inline-flex
+				justify-content: center
+				align-items: center
+				@media #{$phone}
+					width: 40%
+			.loan-inputs
+				width: calc( 40% - 4px)
+				display: inline-block
+				margin-right: 15px
+				margin-top: 15px
+			label, .results p
+				display: block
+				font-size: 16px
+				font-family: $fontb
+				margin: 0
+			input
+				font-size: 22px
+				padding-left: 15px
+				width: 100%
+				height: 50px
+				background-color: white
+				border: none
+				border-radius: 5px
+				margin-right: 10px
+			.results
+				margin-top: 20px
+				.amount
+					font-size: 24px
+	#cta-financial
+		overflow: hidden
+		padding: 0
+		.lp-header-image
+		 
+			position: relative
+			background-color: white
+			// background-blend-mode: luminosity
+			background-position: top
+			background-size: cover
+			background-repeat: no-repeat
+			overflow: hidden
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			@media #{$phone}
+				justify-content: center
+			img
+				position: absolute
+				top: 50%
+				width: 100%
+				transform: translateY(-50%)
+				height: 100%
+				object-fit: cover
+			.overlay
+				
+				overflow: hidden
+				width: 100vw
+				height: 100%
+				// transition: all .2s ease-in-out
+				.left
+					position: absolute
+					z-index: 2
+					left: 0
+					top: 0
+					height: 100%
+					width: 100%
+					background-image: url(../img/fp-angle.png)
+					background-size: cover
+					background-repeat: no-repeat
+					background-position: 80%
+					@media #{$phone} 
+						background-position: 35%
+				.img-object
+					position: absolute
+					right: 0px
+					bottom: 0
+					width: 75vw
+					height: 100%
+					max-height: 946px
+					max-width: 1400px
+					
+					background-size: cover
+					background-repeat: no-repeat
+					background-position: 55%
+					@media #{$phone} 
+						width: 60vw
+						height: 100%
+			
+			.text-wrap
+				position: relative
+				z-index: 3
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 67vw
+				height: 50vh
+				padding: 30px 20px 50px 20px
+				left: 38vw
+				@media #{$phone}
+					width: 50vw
+					left: 50vw
+				.text-box
+					width: 100%
+					color: $fontColor
+					display: flex
+					flex-direction: column
+					align-content: center
+					justify-content: flex-start
+					@media #{$phone}
+						width: 75%
+						justify-content: center
+					h2
+						font-size: 22px
+						line-height: 30px
+						margin: 5px 0
+						color: white
+						@media #{$phone} 
+							margin: 10px 0
+							font-size: 40px
+							line-height: 45px
+						
+					p
+						line-height: 29px
+						margin: 0
+						color: white
+						@media #{$phone}
+							margin: 10px 0
+							line-height: 27px
+							font-size: 22px
+					.button
+						background-color: transparent
+						display: block
+						padding: 10px 20px
+						color: white
+						width: max-content
+						margin-top: 10px
+						text-transform: uppercase
+						border: 2px solid white
+						border-radius: 50px
+						font-size: 16px
+						@media #{$phone}
+							margin-top: 20px
+							padding: 15px 25px
+							font-size: 19px
+
+#about-page
+	.section-container
+		.about-section
+			display: flex
+			flex-direction: row
+			justify-content: center
+			align-items: center
+			.image-group
+				width: 30%
+				position: relative
+				margin: 20px
+				.image-border
+					position: absolute
+					bottom: 0px
+					height: 50px
+					width: 100%
+					background-image: linear-gradient(transparent 20%, white 60%)
+					h4
+						margin-top: 10px
+						text-align: center
+			.text-box
+				width: 70%
+				text-align: center
+				h2, p
+					text-align: center
+				.quote-text
+					color: $primary
+				.sub-copy p
+					font-size: 24px
+					line-height: 30px
+
+
+				&.left
+					width: 30%
+					
+
+				&.right
+					width: 40%
+
+#faq-page
+	.rate-group
+		.rate-group-title
+			height: 180px
+			h3
+				margin-bottom: 20px
+		.rates
+			text-align: left
+
+#holiday-closings
+	h2
+		margin-bottom: 20px
+	.holiday
+		display: flex
+		flex-direction: column
+		margin-bottom: 20px
+		@media #{$phone}
+			flex-direction: row
+		.img-box
+			width: 100%
+			height: 250px
+			background-position: center
+			background-size: cover
+			border-radius: 7px
+		.text-box
+			width: 100%
+			margin-top: 20px
+			margin-left: 0px
+			@media #{$phone}
+				margin-top: 50px
+				margin-left: 50px
+			h4
+				text-transform: uppercase
+				font-size: 35px
+				color: $primary
+			.holiday-date	
+				color: $primary
+				margin: 0
+
+

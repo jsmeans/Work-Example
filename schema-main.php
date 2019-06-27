@@ -1,0 +1,4 @@
+<script type='application/ld+json'>{"@context":"https://schema.org","@type":"WebSite","@id":"https://focusok.com/#website","url":"https://focusok.com/","name":"Focus Federal Credit Union","potentialAction":{"@type":"SearchAction","target":"https://focusok.com/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type='application/ld+json'>{"@context":"https://schema.org","@type":"Organization","url":"https://focusok.com/","sameAs":[],"@id":"https://focusok.com/#organization","name":"Focus Federal Credit Union","logo":""}</script>
+<script type='application/ld+json'>{"@context": "http://www.schema.org","@type": "BankOrCreditUnion","name": "Focus Federal Credit Union","url": "https://focusok.com"}</script>
+<meta name="google-site-verification" content="Zy245nw21U_iAGaXCor5yDuUNEbG7Qcp80Am37P-eHU" />

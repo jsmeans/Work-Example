@@ -1,0 +1,203 @@
+.equiwidth 
+	text-align: justify
+	line-height: .5em
+	padding-top: .25em
+	line-height: 0
+
+	* 
+		display: inline
+
+
+	li 
+		display: inline-block !important
+		width: auto!important
+
+		a 
+			margin: 0
+			line-height: 1em
+		
+
+	&:after 
+		content: ''
+		width: 100% 
+		display: inline-block
+	
+
+/* Fixes styling issues with recaptcha and Foundation */
+#recaptcha_area input[type="text"] 
+	display: inline-block
+	height: auto!important
+
+
+//mixins
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) 
+	text-shadow: $x $y $blur $color
+
+
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset:"") 
+	-webkit-box-shadow:$top $left $blur $spread $color #{$inset}
+	-moz-box-shadow:$top $left $blur $spread $color #{$inset}
+	box-shadow:$top $left $blur $spread $color #{$inset}
+
+
+@mixin multi-box-shadow($shadow1, $shadow2:false, $shadow3:false) 
+	$shadows: $shadow1
+	@if $shadow2  
+		$shadows: $shadow1, $shadow2 
+	@if $shadow3 
+		$shadows: $shadow1, $shadow2, $shadow3 
+	-webkit-box-shadow: $shadows
+	-moz-box-shadow: $shadows
+	box-shadow: $shadows
+
+
+@mixin vertical-align 
+	position: relative
+	top: 50%
+	-webkit-transform: translateY(-50%)
+	-ms-transform: translateY(-50%)
+	transform: translateY(-50%)
+
+
+@mixin border-radius($radius) 
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	border-radius: $radius
+
+
+@mixin opacity($value)
+	$IEValue: $value*100
+	opacity: $value
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")"
+	filter: alpha(opacity=$IEValue)
+	-moz-opacity: $value
+	-khtml-opacity: $value
+
+
+// flex box
+@mixin display-flex() 
+	display: -webkit-box
+	display: -moz-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+
+
+@mixin flex-direction($val) 
+	-webkit-flex-direction: $val
+	-ms-flex-direction: $val
+	flex-direction: $val
+
+
+@mixin flex-wrap($val) 
+	-webkit-flex-wrap: $val
+	-ms-flex-wrap: $val
+	flex-wrap: $val
+
+
+@mixin justify-content($val) 
+	-webkit-justify-content: $val
+	-ms-flex-pack: $val
+	justify-content: $val
+
+
+@mixin align-content($val) 
+	-webkit-align-content: $val
+	-ms-flex-line-pack: $val
+	align-content: $val
+
+
+@mixin align-items($val) 
+	-webkit-align-items: $val
+	-ms-flex-align: $val
+	align-items: $val
+
+
+@mixin flex($values) 
+	-webkit-box-flex: $values
+	-moz-box-flex: $values
+	-webkit-flex: $values
+	-ms-flex: $values
+	flex: $values
+
+
+@mixin order($val) 
+	-webkit-box-ordinal-group: $val 
+	-moz-box-ordinal-group: $val   
+	-ms-flex-order: $val    
+	-webkit-order: $val 
+	order: $val
+
+
+@mixin align-self($val) 
+	-webkit-align-self: $val
+	-ms-flex-item-align: $val
+	align-self: $val
+
+
+// mf mixins
+// got these here: http://engageinteractive.co.uk/blog/top-10-scss-mixins
+@mixin beforeafter($display: block, $pos: absolute, $content: '')
+	content: $content
+	display: $display
+	position: $pos
+
+
+@mixin responsive-ratio($x,$y, $pseudo: false) 
+	height: 0
+	position: relative
+	$padding: unquote( ( $y / $x ) * 100 + '%' )
+	@if $pseudo 
+		&:before 
+			@include beforeafter($pos: relative)
+			width: 100%
+			padding-top: $padding
+		
+	@else 
+		padding-top: $padding
+	
+
+
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false)
+	@include beforeafter($pos: $position)
+	width: 0
+	height: 0
+	@if $round 
+		border-radius: 3px
+	
+	@if $direction == down 
+		border-left: $size solid transparent
+		border-right: $size solid transparent
+		border-top: $size solid $color
+		margin-top: 0 - round( $size / 2.5 )
+	@else if $direction == up 
+		border-left: $size solid transparent
+		border-right: $size solid transparent
+		border-bottom: $size solid $color
+		margin-bottom: 0 - round( $size / 2.5 )
+	@else if $direction == right 
+		border-top: $size solid transparent
+		border-bottom: $size solid transparent
+		border-left: $size solid $color
+		margin-right: -$size;
+	@else if  $direction == left 
+		border-top: $size solid transparent
+		border-bottom: $size solid transparent
+		border-right: $size solid $color
+		margin-left: -$size
+	
+
+
+// force hardware accelleration
+@mixin hardware($backface: true, $perspective: 1000) 
+	@if $backface 
+		backface-visibility: hidden
+	
+	perspective: $perspective
+
+
+@mixin truncate($truncation-boundary) 
+	max-width: $truncation-boundary
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
